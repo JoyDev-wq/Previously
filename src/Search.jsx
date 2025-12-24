@@ -5,7 +5,7 @@ import search_1 from "./assets/black-btn.svg"
 const Search = ({searchOpen, setSearchOpen}) => {
   return (
     <div>
-      <div className={`${searchOpen ? "hidden":"block"} bg-white absolute top-0 w-full left-0 py-4 px-20 flex justify-between `}>
+      <div className={`${searchOpen ? "block":"hidden"} bg-white absolute top-0 w-full left-0 py-4 px-20 flex justify-between `}>
         <input
           type="text"
           placeholder="Search for"
