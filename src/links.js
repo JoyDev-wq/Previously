@@ -1,15 +1,15 @@
-import img_1 from "./assets/link-01.png";
-import img_2 from "./assets/link-02.jpg";
-import img_6 from "./assets/link-06.png";
-import img_4 from "./assets/link-04.png";
-import img_5 from "./assets/link-05.gif";
-import img_3 from "./assets/link-03.gif";
-import img_7 from "./assets/link-07.png";
-import img_8 from "./assets/link-08.png";
-import img_9 from "./assets/link-09.png";
-import img_10 from "./assets/link-10.png";
-import img_11 from "./assets/link-11.gif";
-import img_12 from "./assets/link-12.png";
+import img_1 from "./assets/links/link-01.png";
+import img_2 from "./assets/links/link-02.jpg";
+import img_6 from "./assets/links/link-06.png";
+import img_4 from "./assets/links/link-04.png";
+import img_5 from "./assets/links/link-05.gif";
+import img_3 from "./assets/links/link-03.gif";
+import img_7 from "./assets/links/link-07.png";
+import img_8 from "./assets/links/link-08.png";
+import img_9 from "./assets/links/link-09.png";
+import img_10 from "./assets/links/link-10.png";
+import img_11 from "./assets/links/link-11.gif";
+import img_12 from "./assets/links/link-12.png";
 
 
 
@@ -17,6 +17,7 @@ const containers = [
   {
     image: img_1,
     para: "Fluent in Finance",
+    path: "/page-one"
   },
 
   {
@@ -33,6 +34,7 @@ const container1 = [
   {
     image: img_2,
     para: "Nibbish",
+    path: "/page-two"
   },
   {
     image: img_5,

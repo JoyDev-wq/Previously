@@ -14,7 +14,7 @@ const Footer = () => {
                 Get in touch
               </button>
             </div>
-            <div className="flex gap-6 flex-col lg:flex-row">
+            <div className="flex gap-6 flex-col lg:flex-row no-underline">
               <a href="" className="py-2 border-b-2 text-white border-white">
                 Instagram
               </a>
@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="flex justify-between border-white border-b-2">
             <input
               type="text"
-              className="py-3 outline-none text-gray-500 text-[1.2rem]"
+              className="py-3 outline-none text-gray-500 "
               placeholder="Email Address..."
             />
             <img className="w-16" src={arrow} alt="" />
