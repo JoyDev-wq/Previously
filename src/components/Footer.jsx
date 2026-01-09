@@ -15,7 +15,7 @@ const Footer = () => {
               </button>
             </div>
             <div className="flex gap-6 flex-col lg:flex-row no-underline">
-              <a href="" className="py-2 border-b-2 text-white border-white">
+              <a href="" className="py-2 border-b-2 text-white border-white no-underline">
                 Instagram
               </a>
               <a href="" className="py-2 border-b-2 text-white border-white">

@@ -8,6 +8,7 @@ import video from "../../assets/page_two/video.mp4";
 import f1 from "../../assets/page_two/pg-f1.jpg";
 import video01 from "../../assets/page_two/video01.mp4";
 import Menu from "../homepage/Menu";
+import gsap from "gsap";
 
 const PageTwo = ({ menuOpen, setMenuOpen }) => {
   
@@ -15,10 +16,15 @@ const PageTwo = ({ menuOpen, setMenuOpen }) => {
     window.scrollTo(0,0);
   },[])
 
+  gsap.fromTo('.menu',
+    {x:-800},
+    {x:0, duration:1, ease:"power2.easeInOut"}
+  )
+
   return (
     <div className="bg-black relative text-white p-10">
 
-      <div className="w-full absolute top-0 left-0 z-10">
+      <div className="menu w-full absolute top-0 left-0 z-10" onClick={()=>console.log("Menu Clicked")}>
         <Menu menuOpen={menuOpen} />
       </div>
 

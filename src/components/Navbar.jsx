@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import search from "../assets/search.svg";
 // import close from "../assets/close.svg";
 // import search_1 from "../assets/black-btn.svg";
 import Search from "../Search";
+import gsap from "gsap";
 
 const Navbar = ({ menuOpen, setMenuOpen, searchOpen, setSearchOpen }) => {
+  useEffect(() => {
+    gsap.fromTo(".search", { y: -100 }, { y: 0, duration: 0.5 });
+  }, []);
+
   return (
     <div className="py-8 px-20 bg-black">
       <div className="relative flex justify-between">
@@ -48,7 +53,7 @@ const Navbar = ({ menuOpen, setMenuOpen, searchOpen, setSearchOpen }) => {
             viewBox="0 0 271 69"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="cursor-pointer"
+            className="cursor-pointer "
           >
             <path
               fillRule="evenodd"
@@ -66,7 +71,7 @@ const Navbar = ({ menuOpen, setMenuOpen, searchOpen, setSearchOpen }) => {
           alt=""
         />
       </div>
-      <div>
+      <div className="search absolute w-full z-10 top-0 left-0 ">
         <Search searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
       </div>
     </div>

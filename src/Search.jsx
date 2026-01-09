@@ -1,6 +1,7 @@
 import React from 'react'
 import close from "./assets/close.svg";
-import search_1 from "./assets/black-btn.svg"
+import search_1 from "./assets/black-btn.svg";
+
 
 const Search = ({searchOpen, setSearchOpen}) => {
   return (

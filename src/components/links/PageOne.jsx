@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import facebook from "../../assets/page_one/facebook.svg";
 import linkedin from "../../assets/page_one/linkedin.svg";
 import link from "../../assets/page_one/share-link.svg";
@@ -24,16 +24,26 @@ import f13 from "../../assets/page_one/f13.jpg";
 
 import Carousal from "../UIcomponents/Carousal_1";
 import Carousal_2 from "../UIcomponents/Carousal_2";
+import Menu from "../homepage/Menu";
+import gsap from "gsap";
 
-const PageOne = () => {
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  },[]);
+const PageOne = ({ menuOpen, setMenuOpen }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
+    gsap.fromTo('.menu',
+    {x:-800},
+    {x:0, duration:1, ease:"power2.easeInOut"}
+  )
+  
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black relative text-white">
 
-      
+      <div className="menu w-full absolute top-0 left-0 z-50" onClick={()=>console.log("Menu Clicked")}>
+        <Menu menuOpen={menuOpen} />
+      </div>
+
       <div className="flex justify-between p-10 ">
         <div className="flex flex-col text-white ">
           <p className="uppercase text-[14px] tracking-widest">case Study</p>
@@ -123,7 +133,7 @@ const PageOne = () => {
       <div className="w-full flex flex-col gap-16 p-6">
         <img className="rounded-xl" src={f1} alt="" />
         <img className="rounded-xl" src={f2} alt="" />
-        <Carousal image1={f3} image2={f12}/>
+        <Carousal image1={f3} image2={f12} />
         {/* <img className="rounded-xl" src={f3} alt="" /> */}
       </div>
 
@@ -171,16 +181,14 @@ const PageOne = () => {
           <img className="w-full sm:w-[49%]" src={f9} alt="" />
         </div>
 
-       <div >
-         <Carousal_2 image1={f10} image2={f13}/>
-       </div>
+        <div>
+          <Carousal_2 image1={f10} image2={f13} />
+        </div>
 
         <div>
           <img src={f11} alt="" />
         </div>
       </div>
-
-      
     </div>
   );
 };
